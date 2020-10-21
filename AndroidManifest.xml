@@ -29,6 +29,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <!-- WRITE_SETTINGS is required to record the upcoming alarm prior to L -->
     <uses-permission
@@ -142,6 +143,7 @@
             android:excludeFromRecents="true"
             android:resizeableActivity="false"
             android:showOnLockScreen="true"
+	    android:showWhenLocked="true"
             android:taskAffinity=""
             android:windowSoftInputMode="stateAlwaysHidden" />
 
