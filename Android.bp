@@ -1,10 +1,18 @@
+package {
+    // http://go/android-license-faq
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
 android_app {
     name: "DeskClock",
     resource_dirs: ["res"],
     sdk_version: "current",
-    overrides: ["AlarmClock"],
+    target_sdk_version: "24",
+    overrides: [
+        "AlarmClock",
+    ],
     srcs: [
-        "src/**/*.java",
+        "src/**/*.kt",
         "gen/**/*.java",
     ],
     product_specific: true,
@@ -26,4 +34,6 @@ android_app {
         "androidx.gridlayout_gridlayout",
         "androidx.recyclerview_recyclerview",
     ],
+
+    aaptflags: ["--legacy"],
 }
