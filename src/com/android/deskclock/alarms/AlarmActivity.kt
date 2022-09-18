@@ -49,6 +49,7 @@ import android.view.accessibility.AccessibilityManager
 import android.widget.ImageView
 import android.widget.TextClock
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
 import androidx.core.view.animation.PathInterpolatorCompat
 
@@ -238,7 +239,7 @@ class AlarmActivity : BaseActivity(), View.OnClickListener, View.OnTouchListener
             val filter = IntentFilter(AlarmService.ALARM_DONE_ACTION)
             filter.addAction(AlarmService.ALARM_SNOOZE_ACTION)
             filter.addAction(AlarmService.ALARM_DISMISS_ACTION)
-            registerReceiver(mReceiver, filter, Context.RECEIVER_EXPORTED)
+            ContextCompat.registerReceiver(this, mReceiver, filter, ContextCompat.RECEIVER_EXPORTED)
             mReceiverRegistered = true
         }
         bindAlarmService()
