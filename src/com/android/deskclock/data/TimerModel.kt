@@ -809,9 +809,9 @@ internal class TimerModel(
         fun schedulePendingIntent(am: AlarmManager, triggerTime: Long, pi: PendingIntent?) {
             if (Utils.isMOrLater) {
                 // Ensure the timer fires even if the device is dozing.
-                am.setExactAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, triggerTime, pi)
+                am.setExactAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, triggerTime, pi!!)
             } else {
-                am.setExact(ELAPSED_REALTIME_WAKEUP, triggerTime, pi)
+                am.setExact(ELAPSED_REALTIME_WAKEUP, triggerTime, pi!!)
             }
         }
     }
