@@ -316,7 +316,7 @@ object Utils {
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     fun updateNextAlarm(am: AlarmManager, info: AlarmClockInfo?, op: PendingIntent?) {
-        am.setAlarmClock(info, op)
+        am.setAlarmClock(info!!, op!!)
     }
 
     fun isAlarmWithin24Hours(alarmInstance: AlarmInstance): Boolean {
