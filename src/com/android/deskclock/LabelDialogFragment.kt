@@ -150,7 +150,7 @@ class LabelDialogFragment : DialogFragment() {
      * Handles completing the label edit from the IME keyboard.
      */
     private inner class ImeDoneListener : OnEditorActionListener {
-        override fun onEditorAction(v: TextView, actionId: Int, event: KeyEvent): Boolean {
+        override fun onEditorAction(v: TextView, actionId: Int, event: KeyEvent?): Boolean {
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 setLabel()
                 dismissAllowingStateLoss()
