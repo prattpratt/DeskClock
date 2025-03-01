@@ -40,7 +40,7 @@ import kotlin.math.max
  * Displays a list of lap times in reverse order. That is, the newest lap is at the top, the oldest
  * lap is at the bottom.
  */
-internal class LapsAdapter(context: Context) : RecyclerView.Adapter<LapItemHolder?>() {
+internal class LapsAdapter(context: Context) : RecyclerView.Adapter<LapItemHolder>() {
     private val mInflater: LayoutInflater
     private val mContext: Context
 
