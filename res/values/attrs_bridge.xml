@@ -1,0 +1,10 @@
+<!--
+  This file is required because android.nonTransitiveRClass=false does not work.
+  -->
+<resources>
+    <attr format="color" name="colorAccent" />
+    <attr format="color" name="colorControlActivated" />
+    <attr format="color" name="colorControlNormal" />
+    <attr format="reference" name="selectableItemBackground" />
+    <attr format="reference" name="dropdownPreferenceStyle" />
+</resources>
